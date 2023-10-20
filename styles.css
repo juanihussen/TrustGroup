@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+ 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100&family=Roboto:wght@300&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*-------------------HEADER-------------------*/
+
+
+header {
+    display: flex;
+    justify-content:end;
+}
+
+header a {
+    background-color: white;
+    color: black;
+    padding: 10px 40px;
+    text-decoration: none;
+}
+
+
+header a:hover {
+    background-color: rgba(128, 128, 128, 0.457);
+    color: black;
+    
+}
+
+/*-------------------Primera Imagen-------------------*/
+
+.img-container{
+    width: 100%;
+}
+
+.img-container img {
+    width: 100%;
+    
+}
+
+
+
+
+
+
+/*-------------------TELEFONO-------------------*/
+
+@media only screen and (max-width: 767px) {
+
+body{
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+
+
+
+}
