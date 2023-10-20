@@ -318,16 +318,17 @@ body{
 /* imagen de inicio*/
 
 .img-container{
-    background-image: url("./imagenes/foto\ oficina.jpg"); 
+    background-image: url("./imagenes/foto\ plano\ .jpg");
     height: 600px;
     display: flex;
-    justify-content: end;
+    
     
 }
 .img-container h1{
-    font-size: 40px;
+    font-family: 'Work Sans', sans-serif;
     color: white;
-    margin-top: 60px ;
+    font-size: 40px;
+
 }
 
 
