@@ -1,47 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
  
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@300&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100&family=Roboto:wght@300&display=swap');
 
-body{
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
+
+
+
+*{
     padding: 0;
     margin: 0;
+    
+}
+
+body{
     font-family: 'Roboto', sans-serif;
 }
 
-/*-------------------HEADER-------------------*/
 
 
-header {
-    display: flex;
-    justify-content:end;
-}
-
-header a {
-    background-color: white;
-    color: black;
-    padding: 10px 40px;
-    text-decoration: none;
-}
 
 
-header a:hover {
-    background-color: rgba(128, 128, 128, 0.457);
-    color: black;
-    
-}
 
 /*-------------------Primera Imagen-------------------*/
 
 .img-container{
     width: 100%;
-}
-
-.img-container img {
-    width: 100%;
+    background-image: url("./imagenes/foto\ plano\ .jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
     
 }
+
+.img-container h1{
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    margin-left: 130px;
+    font-size: 80px;
+
+}
+/*-------------------NAV-BAR-------------------*/
+.nav-bar {
+    display: flex;
+    justify-content:center;
+    
+}
+
+.nav-bar a {
+    background-color: white;
+    color: black;
+    padding: 40px 100px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.nav-bar a:hover {
+    color: white;
+    background-color: rgb(170, 170, 170);
+    transition:  0.35s ease;
+}
+
+.subTitulos{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin: 120px 0;
+
+}
+
+
+/*-------------------------- NOSOTROS ------------------------------*/
+
+.container-nosotros{
+    height: 650px;
+    background-color: #000;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.left-nosotros h1 {
+    color: #fff;
+    margin-bottom: 5%;
+    font-size: 45px;
+}
+
+.left-nosotros h2 {
+    color: #fff;
+    font-size: 25px;
+    
+}
+
+.right-nosotros p{
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 2px;
+    
+}
+
+/* ------------------EQUIPO------------------ */
+
+.row{
+    display: flex;
+    justify-content: center;
+    
+}
+.container-fluid {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex-wrap;
+    
+    gap: 15px;
+    
+}
+
+
+.cards{
+    display: flex;
+    gap: 2em;
+    padding: 3em 0;
+}
+
+
+.card{
+    
+    justify-content: center;
+    position: relative;
+    max-width: 550px;
+    min-height: 650px;
+    text-align: start;
+    overflow: hidden;
+    cursor: pointer;
+    background-image:url(./img/FOTO\ JERE.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius:35px;
+    
+    transition: max-width 0.5s ease-in-out;
+    -webkit-transition: max-width 0.5s ease-in-out;
+    -moz-transition: max-width 0.5s ease-in-out;
+    -ms-transition: max-width 0.5s ease-in-out;
+    -o-transition: max-width 0.5s ease-in-out;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+.card:nth-of-type(1){
+    max-width: 12%;
+    background-image: url(./img/carasEquipo/mauricio-sin-fondo.png);
+    border-radius: 25px;
+
+}
+.card:nth-of-type(2){
+    max-width: 12%;
+    background-image: url(./img/carasEquipo/FOTO\ JERE.jpg);
+    border-radius: 25px;
+}
+.card:nth-of-type(3){
+    max-width: 12%;
+    background-image: url(./img/carasEquipo/agustina\ bordoy.jpeg);
+    border-radius: 25px;
+}
+
+
+.card:hover{
+    max-width: 33%;
+    
+}
+
+.title{
+    background: linear-gradient(180deg,rgba(45,45,45,0)0%,#2d2d2d 100%);
+    justify-content: center;
+    position: absolute;
+    inset:0;
+}
+
+.card:hover.title{
+    all: unset;
+}
+.title h2{
+    color: #fffbfb;
+    white-space: nowrap;
+    margin-top: 8%;
+    
+    transform: rotate(-90deg) translatex(-350px);
+    -webkit-transform: rotate(-90deg) translatex(-350);
+    -moz-transform: rotate(-90deg) translatex(-350);
+    -ms-transform: rotate(-90deg) translatex(-350);
+    -o-transform: rotate(-90deg) translatex(-350);
+   
+}
+.card:hover .title h2{
+    padding-bottom: 0.5rem;
+    font-size: 32px;
+    transform: unset;
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
+    transition:  0.35s ease-in-out;
+    text-align:center;
+}
+.card-body p{
+    
+    font-size:16px;
+    color: #fff;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out;
+    -webkit-transition: max-height 0.3s ease-in-out;
+    -moz-transition: max-height 0.3s ease-in-out;
+    -ms-transition: max-height 0.3s ease-in-out;
+    -o-transition: max-height 0.3s ease-in-out;
+    
+}
+
+.card:hover .card-body p{
+    position: relative;
+    top: 70%;
+    opacity: 1 ;
+    max-height: 100%;
+    transition-delay: 0.3s;
+    transition: opacity 1s ease-in-out;
+    
+
+}
+
 
 
 
@@ -55,8 +260,36 @@ header a:hover {
 body{
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: column;
 
 }
+.nav-bar a{
+    text-align: center;
+    padding: 20px 40px;
+}
+
+/* imagen de inicio*/
+
+.img-container{
+    background-image: url("./imagenes/foto\ oficina.jpg"); 
+    height: 600px;
+    display: flex;
+    justify-content: end;
+    
+}
+.img-container h1{
+    font-size: 40px;
+    color: white;
+    margin-top: 60px ;
+}
+
+
+
 
 
 
