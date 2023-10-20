@@ -79,7 +79,7 @@ body{
     font-family: 'Work Sans', sans-serif;
     font-size: 50px;
     text-align: center;
-    margin: 120px 0;
+    margin: 70px 0;
 
 }
 
@@ -249,8 +249,50 @@ body{
 
 
 
+/*-------------------------- ENCONTRANOS---------------------- */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 33%; /* Puedes ajustar este valor según tus necesidades */
+  }
+  
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
+/* -----------------------CONTACTO----------------------------- */
 
+.container-footer{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.info-contacto{
+    margin: 20% 0;
+}
+.info-contacto h1{
+    color: rgba(0, 0, 0, 0.857);
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    margin: 0px 0px 25% 0px;
+    
+
+}
+.info-contacto h4{
+    color: rgba(0, 0, 0, 0.847);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 5% 0px 5% 0px;
+    
+
+}
 
 
 /*-------------------TELEFONO-------------------*/
