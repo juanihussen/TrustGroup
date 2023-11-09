@@ -26,6 +26,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 
@@ -58,15 +59,16 @@ body{
 .nav-bar {
     display: flex;
     justify-content:center;
+    margin-top: 55px;
     
 }
 
 .nav-bar a {
     background-color: white;
     color: black;
-    padding: 40px 100px;
+    padding: 30px 100px;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .nav-bar a:hover {
@@ -83,57 +85,30 @@ body{
 
 }
 
-
-/*-------------------------- NOSOTROS ------------------------------*/
-
-.container-nosotros{
-    height: 650px;
-    background-color: #000;
-    margin-top: 35px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    
+.aparecer {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
-.left-nosotros h1 {
-    color: #fff;
-    margin-bottom: 5%;
-    font-size: 45px;
-}
-
-.left-nosotros h2 {
-    color: #fff;
-    font-size: 25px;
-    
-}
-
-.right-nosotros p{
-    color: #fff;
-    font-size: 25px;
-    letter-spacing: 2px;
-    
-}
-
-/* ------------------EQUIPO------------------ */
-
+/*-------------------------- EQUIPO---------------------- */
 .row{
     display: flex;
     justify-content: center;
-    
 }
 .container-fluid {
     max-width: 100%;
     margin: 0 auto;
     display: flex-wrap;
     
-    gap: 15px;
+    
     
 }
 
 
+
+
 .cards{
     display: flex;
-    gap: 2em;
+    gap: 4em;
     padding: 3em 0;
 }
 
@@ -142,7 +117,7 @@ body{
     
     justify-content: center;
     position: relative;
-    max-width: 550px;
+    max-width: 1550px;
     min-height: 650px;
     text-align: start;
     overflow: hidden;
@@ -184,10 +159,361 @@ body{
 }
 
 
+
+
 .card:hover{
-    max-width: 33%;
+    max-width: 23%;
     
 }
+
+
+.title{
+    background: linear-gradient(180deg,rgba(45,45,45,0)0%,#2d2d2d 100%);
+    justify-content: center;
+    position: absolute;
+    inset:0;
+}
+
+.card:hover.title{
+    all: unset;
+}
+.title h2{
+    color: #fffbfb;
+    white-space: nowrap;
+    margin-top: 8%;
+    
+    transform: rotate(-90deg) translatex(-350px);
+    -webkit-transform: rotate(-90deg) translatex(-350);
+    -moz-transform: rotate(-90deg) translatex(-350);
+    -ms-transform: rotate(-90deg) translatex(-350);
+    -o-transform: rotate(-90deg) translatex(-350);
+   
+}
+.card:hover .title h2{
+    padding-bottom: 0.5rem;
+    font-size: 32px;
+    transform: unset;
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
+    transition:  0.35s ease-in-out;
+    text-align:center;
+}
+.card-body p{
+    
+    font-size:16px;
+    color: #fff;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out;
+    -webkit-transition: max-height 0.3s ease-in-out;
+    -moz-transition: max-height 0.3s ease-in-out;
+    -ms-transition: max-height 0.3s ease-in-out;
+    -o-transition: max-height 0.3s ease-in-out;
+    
+}
+
+.card:hover .card-body p{
+    position: relative;
+    top: 70%;
+    opacity: 1 ;
+    max-height: 100%;
+    transition-delay: 0.3s;
+    transition: opacity 1s ease-in-out;
+    
+
+}
+
+/*-------------------------- NOSOTROS ------------------------------*/
+
+.container-nosotros{
+    height: 650px;
+    background-color: #000;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.left-nosotros h1 {
+    color: #fff;
+    margin-bottom: 5%;
+    font-size: 45px;
+}
+
+.left-nosotros h2 {
+    color: #fff;
+    font-size: 25px;
+    
+}
+
+.right-nosotros p{
+    color: #fff;
+    font-size: 25px;
+    
+}
+
+
+/*-------------------------- PROYECTOS ------------------------------*/
+.container-pictures-proyects{
+    margin-top: 35px;
+    
+}
+
+.first-line-img{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.picture-proyects{
+    width: 50%;
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+
+}
+.picture-proyects:hover img {
+    transform: scale(1.2);
+    transition: transform 0.5s ease ;
+}
+
+.picture-proyects:hover .overlay {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.447);
+
+    
+
+}
+.picture-proyects img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-position: cover;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+.picture-proyects img:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+    
+
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay button{
+   
+        border: 1px solid #000;
+        background-color: transparent;
+        color: black;
+        padding: 5px 15px;
+        font-size: 23px;
+        transition: transform 0.5s ease;
+        opacity: 0;
+}
+
+.picture-proyects :hover button{
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+    opacity: 1;
+    
+}
+
+
+/*-------------------------- ENCONTRANOS---------------------- */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 33%; /* Puedes ajustar este valor según tus necesidades */
+  }
+  
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+/* -----------------------CONTACTO----------------------------- */
+.Contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    
+    
+}
+.Contacto a{
+    font-family: 'Roboto', sans-serif;
+    padding: 15px 15px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    text-align: center;
+    
+}
+
+#insta{
+    background: linear-gradient(to bottom, #8a3ab9, #ed2e7e, #ffaa2b);
+    color: white;
+
+}
+
+#Mail_Me{
+    background-color: red;
+    color: white;
+    
+}
+.container-footer{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.info-contacto{
+    margin: 20% 0;
+}
+.info-contacto h1{
+    color: rgba(0, 0, 0, 0.857);
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    margin: 0px 0px 25% 0px;
+    
+
+}
+.info-contacto h4{
+    color: rgba(0, 0, 0, 0.847);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 5% 0px 5% 0px;
+    
+
+}
+
+
+/*-------------------TELEFONO-------------------*/
+
+@media only screen and (max-width: 767px) {
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.subTitulos{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin: 70px 0;
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+
+}
+.nav-bar a{
+    text-align: center;
+    padding: 20px 40px;
+}
+
+/* imagen de inicio*/
+
+.img-container{
+    background-image: url("./imagenes/foto\ plano\ .jpg");
+    height: 800px;
+    display: flex;
+    
+    
+}
+.img-container h1{
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    font-size: 40px;
+
+}
+
+/*cartas*/
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-fluid {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex-wrap;
+    
+    gap: 15px;
+    
+}
+
+
+
+
+.cards{
+    display: flex;
+    gap: 2em;
+    padding: 2em 0;
+}
+
+
+.card{
+    
+    justify-content: center;
+    position: relative;
+    max-width: 550px;
+    min-height: 650px;
+    text-align: start;
+    overflow: hidden;
+    cursor: pointer;
+    background-image:url(./img/FOTO\ JERE.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius:35px;
+    
+    transition: max-width 0.5s ease-in-out;
+    -webkit-transition: max-width 0.5s ease-in-out;
+    -moz-transition: max-width 0.5s ease-in-out;
+    -ms-transition: max-width 0.5s ease-in-out;
+    -o-transition: max-width 0.5s ease-in-out;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+
+
+
+
 
 .title{
     background: linear-gradient(180deg,rgba(45,45,45,0)0%,#2d2d2d 100%);
@@ -248,24 +574,184 @@ body{
 }
 
 
+.card:nth-of-type(1){
+    max-width: 93%;
+    background-image: url(./img/carasEquipo/mauricio-sin-fondo.png);
+    border-radius: 25px;
 
-/*-------------------------- ENCONTRANOS---------------------- */
-.map-container {
-    position: relative;
+}
+.card:nth-of-type(2){
+    max-width: 100%;
+    background-image: url(./img/carasEquipo/FOTO\ JERE.jpg);
+    border-radius: 25px;
+}
+.card:nth-of-type(3){
+    max-width: 100%;
+    background-image: url(./img/carasEquipo/agustina\ bordoy.jpeg);
+    border-radius: 25px;
+}
+
+
+
+/*NOSOTROS*/
+
+.container-nosotros{
+    height: 1000px;
+    background-color: #000;
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    
+}
+.left-nosotros h1 {
+    text-align: left;
+    color: #fff;
+    margin-bottom: 5%;
+    font-size: 30px;
+}
+
+.left-nosotros h2 {
+    text-align: left;
+    color: #fff;
+    font-size: 20px;
+    
+}
+
+.right-nosotros p{
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    
+}
+
+
+/*PROYECTOS*/
+
+
+.container-pictures-proyects{
+    margin-top: 35px;
+    
+}
+
+.first-line-img{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+
+.picture-proyects{
     width: 100%;
-    height: 0;
-    padding-bottom: 33%; /* Puedes ajustar este valor según tus necesidades */
-  }
-  
-  .map-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+
+}
+.picture-proyects:hover img {
+    transform: scale(1.2);
+    transition: transform 0.5s ease ;
+}
+
+.picture-proyects:hover .overlay {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.447);
+
+    
+
+}
+.picture-proyects img {
+    max-width: 100%;
     width: 100%;
     height: 100%;
-  }
+    object-position: cover;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+    
+}
 
-/* -----------------------CONTACTO----------------------------- */
+.picture-proyects img:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+    
+
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay button{
+   
+        border: 1px solid #000;
+        background-color: transparent;
+        color: black;
+        padding: 5px 15px;
+        font-size: 23px;
+        transition: transform 0.5s ease;
+        opacity: 0;
+}
+
+.picture-proyects :hover button{
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+    opacity: 1;
+    
+}
+
+/*CONTACTO*/
+
+.Contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    
+    
+}
+.Contacto a{
+    font-family: 'Roboto', sans-serif;
+    padding: 15px 15px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    
+    text-decoration: none;
+    color: black;
+    width: 80%;
+    text-align: center;
+    border-radius: 15px;
+    
+
+    
+
+    
+}
+
+#insta{
+    background: linear-gradient(to bottom, #8a3ab9, #ed2e7e, #ffaa2b);
+    color: white;
+
+}
+
+#Mail_Me{
+    background-color: red;
+    color: white;
+    
+}
+
+
+
 
 .container-footer{
     background-color: white;
@@ -293,47 +779,6 @@ body{
     
 
 }
-
-
-/*-------------------TELEFONO-------------------*/
-
-@media only screen and (max-width: 767px) {
-
-body{
-    padding: 0;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-.nav-bar{
-    display: flex;
-    flex-direction: column;
-
-}
-.nav-bar a{
-    text-align: center;
-    padding: 20px 40px;
-}
-
-/* imagen de inicio*/
-
-.img-container{
-    background-image: url("./imagenes/foto\ plano\ .jpg");
-    height: 600px;
-    display: flex;
-    
-    
-}
-.img-container h1{
-    font-family: 'Work Sans', sans-serif;
-    color: white;
-    font-size: 40px;
-
-}
-
-
-
-
 
 
 
