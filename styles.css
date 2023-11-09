@@ -369,7 +369,7 @@ body{
     letter-spacing: 5px;
     text-decoration: none;
     color: black;
-    width: 70%;
+    width:  100%;
     text-align: center;
     border-radius: 10px;
     
@@ -381,11 +381,7 @@ body{
 
 }
 
-#Mail_Me{
-    background-color: red;
-    color: white;
-    
-}
+
 .container-footer{
     background-color: white;
     display: flex;
@@ -414,7 +410,7 @@ body{
 }
 
 
-/*-------------------TELEFONO-------------------*/
+/*--------------------------------------------------------------------------TELEFONO-------------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 767px) {
 
@@ -523,7 +519,7 @@ body{
     inset:0;
 }
 
-.card:hover.title{
+.card:active.title{
     all: unset;
 }
 .title h2{
@@ -538,7 +534,7 @@ body{
     -o-transform: rotate(-90deg) translatex(-350);
    
 }
-.card:hover .title h2{
+.card:active .title h2{
     padding-bottom: 0.5rem;
     font-size: 32px;
     transform: unset;
@@ -563,7 +559,7 @@ body{
     
 }
 
-.card:hover .card-body p{
+.card:active .card-body p{
     position: relative;
     top: 70%;
     opacity: 1 ;
